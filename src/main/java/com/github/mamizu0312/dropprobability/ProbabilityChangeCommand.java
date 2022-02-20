@@ -25,7 +25,7 @@ public class ProbabilityChangeCommand implements CommandExecutor {
         }
         Player p = (Player) sender;
 
-        if(!(p.hasPermission("changeprobability.change"))) {
+        if(!(p.hasPermission("dropprobability.change"))) {
 
             p.sendMessage("あなたは権限を持っていません");
             return true;
