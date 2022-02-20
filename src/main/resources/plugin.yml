@@ -1,0 +1,10 @@
+name: DropProbability
+version: ${project.version}
+main: com.github.mamizu0312.dropprobability.DropProbability
+api-version: 1.18
+description: This plugin change the probability of particular item.
+commands:
+  probchange:
+    description: None
+  probcheck:
+    description: None
