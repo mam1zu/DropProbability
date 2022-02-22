@@ -19,7 +19,29 @@ public class ProbabilityChangeCommand implements CommandExecutor {
 
         if(!(sender instanceof Player)) {
 
-            sender.sendMessage("This command must be executed by Player.");
+            if(!(args.length == 1)) {
+
+                sender.sendMessage("0~100の整数を一つだけ入力してください");
+                return true;
+
+            }
+            int input;
+
+            try {
+
+                input = Integer.parseInt(args[0]);
+
+            } catch (NumberFormatException e) {
+
+                sender.sendMessage("0~100の整数を入力してください");
+                return true;
+
+            }
+
+            if((input <= 0) || (100 <= input)) {
+                sender.sendMessage("0~100の整数を入力して下さい");
+            }
+
             return true;
 
         }
@@ -41,8 +63,8 @@ public class ProbabilityChangeCommand implements CommandExecutor {
 
         try {
 
-            input = Integer.valueOf(args[0]);
-            if((input < 0) || (100 < input)) {
+            input = Integer.parseInt(args[0]);
+            if((input <= 0) || (100 <= input)) {
                 p.sendMessage("0~100までの整数を入力してください");
                 return true;
             }
