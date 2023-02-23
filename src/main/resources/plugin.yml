@@ -1,0 +1,12 @@
+name: DropProbability
+version: '${project.version}'
+main: io.github.mamizu0312.dropprobability.DropProbability
+api-version: 1.19
+authors: [ Mamizu0312 ]
+description: DropProbability
+website: Mamizu0312.github.io
+commands:
+  probchange:
+    description: None
+  probcheck:
+    description: None
